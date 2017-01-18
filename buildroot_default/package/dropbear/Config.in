@@ -1,0 +1,28 @@
+config BR2_PACKAGE_DROPBEAR
+	bool "dropbear"
+	select BR2_PACKAGE_ZLIB
+	help
+	  A small SSH 2 server designed for small memory environments.
+
+	  http://matt.ucc.asn.au/dropbear/dropbear.html
+
+if BR2_PACKAGE_DROPBEAR
+
+config BR2_PACKAGE_DROPBEAR_CLIENT
+	bool "client programs"
+	default y
+	help
+	  Provides the programs: dbclient, ssh
+
+	  Note that the following programs are also used server-side
+	  and are therefore always build regardless this setting:
+	  dropbear, dropbearkey, dropbearconvert, scp
+
+config BR2_PACKAGE_DROPBEAR_DISABLE_REVERSEDNS
+	bool "disable reverse DNS lookups"
+	help
+	  Disable reverse DNS lookups on connection. This can be handy
+	  on systems without working DNS, as connections otherwise
+	  stall until DNS times out.
+
+endif

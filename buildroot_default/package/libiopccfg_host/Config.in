@@ -1,0 +1,5 @@
+config BR2_PACKAGE_LIBIOPCCFG_HOST
+	bool "libiopccfg_host"
+	select BR2_PACKAGE_IOPCCFG
+	help
+	  IOPC Host configurations.

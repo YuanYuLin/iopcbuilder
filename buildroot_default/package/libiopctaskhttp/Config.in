@@ -1,0 +1,6 @@
+config BR2_PACKAGE_LIBIOPCTASKHTTP
+	bool "libiopctaskhttp"
+	select BR2_PACKAGE_LIBIOPCCOMMON
+	select BR2_PACKAGE_LIBMICROHTTPD
+	help
+	  The shell task library of IOPC.

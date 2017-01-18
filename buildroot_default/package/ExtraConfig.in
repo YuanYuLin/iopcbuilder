@@ -1,0 +1,41 @@
+menu "extra packages"
+	menu "BSP UNIONFS"
+		source "package/init_unionfs/Config.in"
+		source "package/busyboxbsp/Config.in"
+	endmenu
+
+	menu "Host"
+		source "package/iopcmsgbus/Config.in"
+		source "package/libiopcmsgbus/Config.in"
+		source "package/iopccfg/Config.in"
+		source "package/libiopccfg/Config.in"
+		source "package/libiopccfg_host/Config.in"
+		source "package/kmod_xiaomi_wifi/Config.in"
+	endmenu
+
+	menu "Web Container"
+		source "package/webgui/Config.in"
+		source "package/iopcmsgbus/Config.in"
+		source "package/libiopcmsgbus/Config.in"
+		source "package/iopccfg/Config.in"
+		source "package/libiopccfg/Config.in"
+	endmenu
+
+	menu "MediaCenter Container"
+		source "package/omxplayer/Config.in"
+		source "package/ffmpeg2/Config.in"
+		source "package/iopcmsgbus/Config.in"
+		source "package/libiopcmsgbus/Config.in"
+		source "package/iopccfg/Config.in"
+		source "package/libiopccfg/Config.in"
+		source "package/dfreerdp/Config.in"
+		source "package/dial_server/Config.in"
+		source "package/libgtk2_dfb/Config.in"
+		source "package/webkit_dfb/Config.in"
+		source "package/webkitdfb/Config.in"
+	endmenu
+
+	menu "Unit Test sources"
+		source "package/kmod_hello/Config.in"
+	endmenu
+endmenu

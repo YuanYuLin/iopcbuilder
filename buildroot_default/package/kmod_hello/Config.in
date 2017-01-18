@@ -1,0 +1,5 @@
+config BR2_PACKAGE_KMOD_HELLO
+	bool "kmod_hello"
+	help
+	  Kernel module - hello world
+

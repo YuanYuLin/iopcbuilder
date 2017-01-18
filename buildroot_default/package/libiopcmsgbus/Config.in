@@ -1,0 +1,4 @@
+config BR2_PACKAGE_LIBIOPCMSGBUS
+	bool "libiopcmsgbus"
+	help
+	  library IOPC message bus between host and gust base on uds.

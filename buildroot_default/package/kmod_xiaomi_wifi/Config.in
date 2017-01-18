@@ -1,0 +1,5 @@
+config BR2_PACKAGE_KMOD_XIAOMI_WIFI
+	bool "kmod_xiaomi_wifi"
+	help
+	  Kernel module - XIAOMI WIFI module
+

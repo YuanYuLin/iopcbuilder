@@ -1,0 +1,235 @@
+comment "ffmpeg2 needs a toolchain w/ largefile, IPv6"
+	depends on !(BR2_LARGEFILE && BR2_INET_IPV6) && !BR2_PACKAGE_FFMPEG2
+
+# Warning! Moving this comment to the top of the file will make it
+# appear in the ffmpeg sub-menu, dues to its dependency on ffmpeg.
+# Be sure to keep it here, below the other comment above, which breaks
+# the dependency chain, and thus breaks the adherence to the ffmpeg
+# sub-menu.
+comment "ffmpeg2 conflicts with ffmpeg"
+	depends on BR2_PACKAGE_FFMPEG
+
+menuconfig BR2_PACKAGE_FFMPEG2
+	bool "ffmpeg2"
+	depends on !BR2_PACKAGE_FFMPEG
+	depends on BR2_LARGEFILE
+	depends on BR2_INET_IPV6
+	help
+	  FFmpeg is a complete, cross-platform solution to record, convert
+	  and stream audio and video.
+
+	  http://www.ffmpeg.org
+
+	  Note: the help texts of the FFmpeg2 options, below, are scrapped
+	  directly from FFMpeg2's ./configure --help. Refer to the project's
+	  documentation for the actual meaning of the help texts.
+
+if BR2_PACKAGE_FFMPEG2
+
+config BR2_PACKAGE_FFMPEG2_GPL
+	bool "Enable GPL code"
+	help
+	  Allow use of GPL code, the resulting libs and binaries will
+	  be under GPL
+
+config BR2_PACKAGE_FFMPEG2_GPL3
+	bool "Use (L)GPLv3 instead of v2"
+	depends on BR2_PACKAGE_FFMPEG2_GPL
+	help
+	  Upgrade (L)GPL to version 3
+
+config BR2_PACKAGE_FFMPEG2_NONFREE
+	bool "Enable nonfree code"
+	help
+	  Allow use of nonfree code, the resulting libs and binaries
+	  will be unredistributable
+
+comment "Programs"
+
+config BR2_PACKAGE_FFMPEG2_FFMPEG
+	bool "ffmpeg"
+	select BR2_PACKAGE_FFMPEG2_SWSCALE
+	default y
+	help
+	  FFmpeg is a very fast video and audio converter.
+	  It can also grab from a live audio/video source.
+
+	  It is not needed if you want to link the FFmpeg libraries
+	  to your application.
+
+config BR2_PACKAGE_FFMPEG2_FFPLAY
+	bool "ffplay"
+	select BR2_PACKAGE_SDL
+	help
+	  FFplay is a very simple and portable media player using the
+	  FFmpeg libraries and the SDL library.
+	  It is mostly used as a testbed for the various FFmpeg APIs.
+
+config BR2_PACKAGE_FFMPEG2_FFPROBE
+	bool "ffprobe"
+	help
+	  ffprobe gathers information from multimedia streams and prints
+	  it in human- and machine-readable fashion.
+
+config BR2_PACKAGE_FFMPEG2_FFSERVER
+	bool "ffserver"
+	help
+	  FFserver is a streaming server for both audio and video.
+
+comment "Libraries"
+
+config BR2_PACKAGE_FFMPEG2_AVCODEC
+	bool "libavcodec"
+
+config BR2_PACKAGE_FFMPEG2_AVDEVICE
+	bool "libavdevice"
+
+config BR2_PACKAGE_FFMPEG2_AVFILTER
+	bool "libavfilter"
+	select BR2_PACKAGE_FFMPEG2_AVUTIL
+	select BR2_PACKAGE_FFMPEG2_AVFORMAT
+	select BR2_PACKAGE_FFMPEG2_AVCODEC
+
+config BR2_PACKAGE_FFMPEG2_AVFORMAT
+	bool "libavformat"
+
+config BR2_PACKAGE_FFMPEG2_AVRESAMPLE
+	bool "libavresample"
+
+config BR2_PACKAGE_FFMPEG2_AVUTIL
+	bool "libavutil"
+
+config BR2_PACKAGE_FFMPEG2_POSTPROC
+	bool "libpostproc"
+	depends on BR2_PACKAGE_FFMPEG2_GPL
+
+config BR2_PACKAGE_FFMPEG2_SWRESAMPLE
+	bool "libswresample"
+
+config BR2_PACKAGE_FFMPEG2_SWSCALE
+	bool "libswscale"
+
+comment "Hardware acceleration"
+
+config BR2_PACKAGE_FFMPEG2_DXVA2
+	bool "dxva2"
+
+config BR2_PACKAGE_FFMPEG2_VAAPI
+	bool "vaapi"
+
+config BR2_PACKAGE_FFMPEG2_VDA
+	bool "vda"
+
+config BR2_PACKAGE_FFMPEG2_VDPAU
+	bool "vdpau"
+
+comment "Components options"
+
+config BR2_PACKAGE_FFMPEG2_ENCODERS
+	string "Enabled encoders"
+	default "all"
+	help
+	  Space-separated list of encoders to build in FFmpeg,
+	  or "all" to build all of them.
+
+	  Run ./configure --list-encoders in the ffmpeg sources
+	  directory to know the available options.
+
+config BR2_PACKAGE_FFMPEG2_DECODERS
+	string "Enabled decoders"
+	default "all"
+	help
+	  Space-separated list of decoders to build in FFmpeg,
+	  or "all" to build all of them.
+
+	  Run ./configure --list-decoders in the ffmpeg sources
+	  directory to know the available options.
+
+config BR2_PACKAGE_FFMPEG2_MUXERS
+	string "Enabled muxers"
+	default "all"
+	help
+	  Space-separated list of muxers to build in FFmpeg,
+	  or "all" to build all of them.
+
+	  Run ./configure --list-muxers in the ffmpeg sources
+	  directory to know the available options.
+
+config BR2_PACKAGE_FFMPEG2_DEMUXERS
+	string "Enabled demuxers"
+	default "all"
+	help
+	  Space-separated list of demuxers to build in FFmpeg,
+	  or "all" to build all of them.
+
+	  Run ./configure --list-demuxers in the ffmpeg sources
+	  directory to know the available options.
+
+config BR2_PACKAGE_FFMPEG2_PARSERS
+	string "Enabled parsers"
+	default "all"
+	help
+	  Space-separated list of parsers to build in FFmpeg,
+	  or "all" to build all of them.
+
+	  Run ./configure --list-parsers in the ffmpeg sources
+	  directory to know the available options.
+
+config BR2_PACKAGE_FFMPEG2_BSFS
+	string "Enabled bitstreams"
+	default "all"
+	help
+	  Space-separated list of bitstream filters to build in FFmpeg,
+	  or "all" to build all of them.
+
+	  Run ./configure --list-bsfs in the ffmpeg sources
+	  directory to know the available options.
+
+config BR2_PACKAGE_FFMPEG2_PROTOCOLS
+	string "Enabled protocols"
+	default "all"
+	help
+	  Space-separated list of protocols to build in FFmpeg,
+	  or "all" to build all of them.
+
+	  Run ./configure --list-protocols in the ffmpeg sources
+	  directory to know the available options.
+
+config BR2_PACKAGE_FFMPEG2_FILTERS
+	string "Enabled filters"
+	default "all"
+	help
+	  Space-separated list of filters to build in FFmpeg,
+	  or "all" to build all of them.
+
+	  Run ./configure --list-filters in the ffmpeg sources
+	  directory to know the available options.
+
+config BR2_PACKAGE_FFMPEG2_INDEVS
+	string "Enabled input devices"
+	default "all"
+	help
+	  Space-separated list of input devices to build into FFMpeg,
+	  or "all" to build all of them.
+
+	  Run ./configure --list-indevs in the ffmpeg sources
+	  directory to know the available options.
+
+config BR2_PACKAGE_FFMPEG2_OUTDEVS
+	string "Enabled output devices"
+	default "all"
+	help
+	  Space-separated list of output devices to build into FFMpeg,
+	  or "all" to build all of them.
+
+	  Run ./configure --list-outdevs in the ffmpeg sources
+	  directory to know the available options.
+
+config BR2_PACKAGE_FFMPEG2_EXTRACONF
+	string "Additional parameters for ./configure"
+	default ""
+	help
+	  Extra parameters that will be appended to FFmpeg's
+	  ./configure commandline.
+
+endif

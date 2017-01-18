@@ -1,0 +1,10 @@
+config BR2_PACKAGE_DFREERDP
+	bool "dfreerdp"
+	select BR2_PACKAGE_OPENSSL
+	select BR2_PACKAGE_ZLIB
+	select BR2_PACKAGE_DIRECTFB
+	help
+	  FreeRDP is a free implementation of the Remote Desktop
+	  Protocol (RDP), released under the Apache license
+
+	  http://www.freerdp.com/

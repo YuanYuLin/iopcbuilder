@@ -1,0 +1,5 @@
+config BR2_PACKAGE_LIBIOPCTASKMQHANDLER
+	bool "libiopctaskmqhandler"
+	select BR2_PACKAGE_LIBIOPCCOMMON
+	help
+	  The message queue processing task library of IOPC.

@@ -1,0 +1,5 @@
+config BR2_PACKAGE_LIBIOPCCFG
+	bool "libiopccfg"
+	select BR2_PACKAGE_JSON_C
+	help
+	  library of IOPC configuration util.

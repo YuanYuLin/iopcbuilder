@@ -1,0 +1,40 @@
+config BR2_PACKAGE_WEBKIT_ARCH_SUPPORTS
+	bool
+	# ARM needs BLX, so v5t+
+	default y if (BR2_arm || BR2_armeb) && !BR2_ARM_CPU_ARMV4
+	default y if BR2_i386 || BR2_mips || BR2_mipsel || \
+		BR2_sparc || BR2_x86_64
+	depends on BR2_USE_MMU # libgail -> pango -> libglib2
+
+
+config BR2_PACKAGE_WEBKIT_DFB
+	bool "webkit_dfb"
+	#depends on BR2_INSTALL_LIBSTDCPP
+	#depends on BR2_USE_WCHAR # enchant -> libglib2
+	#depends on BR2_TOOLCHAIN_HAS_THREADS # enchant -> libglib2; icu
+	#depends on BR2_PACKAGE_LIBGTK2
+	#depends on BR2_PACKAGE_WEBKIT_ARCH_SUPPORTS
+	#depends on !BR2_BINFMT_FLAT # icu
+	#depends on BR2_ARCH_HAS_ATOMICS # cairo
+	select BR2_PACKAGE_CAIRO
+	select BR2_PACKAGE_CAIRO_PNG
+	select BR2_PACKAGE_ENCHANT
+	select BR2_PACKAGE_HARFBUZZ
+	select BR2_PACKAGE_ICU
+	select BR2_PACKAGE_JPEG
+	select BR2_PACKAGE_LIBCURL
+	select BR2_PACKAGE_LIBGAIL
+	select BR2_PACKAGE_LIBSECRET
+	select BR2_PACKAGE_LIBSOUP
+	select BR2_PACKAGE_LIBXML2
+	select BR2_PACKAGE_LIBXSLT
+	select BR2_PACKAGE_SQLITE
+	select BR2_PACKAGE_WEBP
+	help
+	  WebKit is an open source, standards compliant web browser engine.
+
+	  Note that WebKit does not build with a toolchain using the
+	  old linuxthreads library.
+
+	  http://webkit.org/
+

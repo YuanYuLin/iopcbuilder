@@ -1,0 +1,5 @@
+config BR2_PACKAGE_IOPCCFG_BDB
+	bool "iopccfg_bdb"
+	select BR2_PACKAGE_LIBIOPCCOMMON
+	help
+	  IOPC configuration util.

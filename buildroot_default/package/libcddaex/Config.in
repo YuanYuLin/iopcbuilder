@@ -1,0 +1,5 @@
+config BR2_PACKAGE_LIBCDDAEX
+	bool "libcddaex"
+	select BR2_PACKAGE_LIBIOPCCOMMON
+	help
+	  The timer task library of IOPC.

@@ -1,0 +1,5 @@
+config BR2_PACKAGE_LIBIOPCCMD_NETWORK
+	bool "libiopccmd_network"
+	select BR2_PACKAGE_LIBIOPCCOMMON
+	help
+	  The command library of IOPC.

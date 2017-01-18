@@ -1,0 +1,5 @@
+config BR2_PACKAGE_LIBIOPCTASKDB
+	bool "libiopctaskdb"
+	select BR2_PACKAGE_LIBIOPCCOMMON
+	help
+	  The db task library of IOPC.

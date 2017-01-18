@@ -1,0 +1,38 @@
+Makefile.include: clean up the cruft
+
+Most of the variables that Makefile.include tries to set (and fails to),
+are already available from Buildroot's variables:
+  - AR, AS, CC, CXX, OBJDUMP...
+  - CFLAGS, CXXFLAGS, CPPFLAGS...
+
+This leaves us with a few select variables that defines (include and
+library) paths local to the omxplayer package, plus a few optimisations.
+
+Signed-off-by: "Yann E. MORIN" <yann.morin.1998@free.fr>
+diff -durN omxplayer-37fd6fb.orig/Makefile.include omxplayer-37fd6fb/Makefile.include
+--- omxplayer-37fd6fb.orig/Makefile.include	2013-10-16 14:21:05.000000000 +0200
++++ omxplayer-37fd6fb/Makefile.include	2013-10-17 22:53:02.294062252 +0200
+@@ -20,21 +20,5 @@
+ 
+ JOBS=7
+ 
+-CFLAGS			:= -isystem$(PREFIX)/include
+-CXXFLAGS		:= $(CFLAGS)
+-CPPFLAGS		:= $(CFLAGS)
+-LDFLAGS			:= -L$(BUILDROOT)/lib
+-LD					:= $(TOOLCHAIN)/bin/$(HOST)-ld --sysroot=$(SYSROOT)
+-CC					:= $(TOOLCHAIN)/bin/$(HOST)-gcc --sysroot=$(SYSROOT)
+-CXX         := $(TOOLCHAIN)/bin/$(HOST)-g++ --sysroot=$(SYSROOT)
+-OBJDUMP			:= $(TOOLCHAIN)/bin/$(HOST)-objdump
+-RANLIB			:= $(TOOLCHAIN)/bin/$(HOST)-ranlib
+-STRIP				:= $(TOOLCHAIN)/bin/$(HOST)-strip
+-AR 					:= $(TOOLCHAIN)/bin/$(HOST)-ar
+-CXXCP 			:= $(CXX) -E
+-PATH 				:= $(PREFIX)/bin:$(BUILDROOT)/output/host/usr/bin:$(PATH)
+-
+-CFLAGS			+= -pipe -mfloat-abi=$(FLOAT) -mcpu=arm1176jzf-s -fomit-frame-pointer -mabi=aapcs-linux -mtune=arm1176jzf-s -mfpu=vfp -Wno-psabi -mno-apcs-stack-check -g -mstructure-size-boundary=32 -mno-sched-prolog
+-LDFLAGS			+= -L$(SDKSTAGE)/lib -L$(SDKSTAGE)/usr/lib -L$(SDKSTAGE)/opt/vc/lib/ -Lpcre/build
+-#INCLUDES		+= -isystem$(SDKSTAGE)/usr/include -isystem$(SDKSTAGE)/opt/vc/include -isystem$(SYSROOT)/usr/include -isystem$(SDKSTAGE)/opt/vc/include/interface/vcos/pthreads -isystem$(SDKSTAGE)/usr/include/freetype2
+-INCLUDES		+= -isystem$(SDKSTAGE)/opt/vc/include -isystem$(SYSROOT)/usr/include -isystem$(SDKSTAGE)/opt/vc/include/interface/vcos/pthreads -Ipcre/build -Iboost-trunk -Ifreetype2/include
++CFLAGS			+= -fomit-frame-pointer -Wno-psabi -mno-apcs-stack-check    \
++			   -mstructure-size-boundary=32 -mno-sched-prolog

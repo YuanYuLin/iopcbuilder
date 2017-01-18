@@ -1,0 +1,5 @@
+config BR2_PACKAGE_LIBIOPCTASKSHELL
+	bool "libiopctaskshell"
+	select BR2_PACKAGE_LIBIOPCCOMMON
+	help
+	  The shell task library of IOPC.

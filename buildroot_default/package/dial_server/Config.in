@@ -1,0 +1,4 @@
+config BR2_PACKAGE_DIAL_SERVER
+	bool "dial_server"
+	help
+	  Dial server.
