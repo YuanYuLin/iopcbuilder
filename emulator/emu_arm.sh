@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ "$#" == "0" ]; then
+    echo "emu_arm <kernel> <hda> <hdb> <hdc>"
+    exit 1
+fi
+
 MACHINE="-M versatilepb"
 KERNEL="-kernel $1"
 #HDD="-hda $2"
