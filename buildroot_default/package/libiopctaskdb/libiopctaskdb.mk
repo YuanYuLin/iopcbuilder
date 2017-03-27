@@ -4,10 +4,10 @@
 #
 ################################################################################
 
-#LIBIOPCTASKDB_VERSION       = 29423707bd9f8759fa85dd331ce31d4612c62d26
+LIBIOPCTASKDB_VERSION       = 29423707bd9f8759fa85dd331ce31d4612c62d26
 LIBIOPCTASKDB_VERSION_MAJOR = 1
 LIBIOPCTASKDB_VERSION_MINOR = 0
-#LIBIOPCTASKDB_SITE          = $(call github,YuanYuLin,libiopctaskdb,$(LIBIOPCTASKDB_VERSION))
+LIBIOPCTASKDB_SITE          = $(call github,YuanYuLin,libiopctaskdb,$(LIBIOPCTASKDB_VERSION))
 LIBIOPCTASKDB_SITE          = file:///tmp
 LIBIOPCTASKDB_SOURCE        = libiopctaskdb.tar.bz2
 LIBIOPCTASKDB_LICENSE       = GPLv2+

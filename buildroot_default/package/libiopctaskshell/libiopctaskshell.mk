@@ -4,12 +4,12 @@
 #
 ################################################################################
 
-#LIBIOPCTASKSHELL_VERSION       = 29423707bd9f8759fa85dd331ce31d4612c62d26
+LIBIOPCTASKSHELL_VERSION       = 9b3b1cfca7d32ff65b5d5e089eec471ec0553302
 LIBIOPCTASKSHELL_VERSION_MAJOR = 1
 LIBIOPCTASKSHELL_VERSION_MINOR = 0
-#LIBIOPCTASKSHELL_SITE          = $(call github,YuanYuLin,libiopctaskshell,$(LIBIOPCTASKSHELL_VERSION))
-LIBIOPCTASKSHELL_SITE          = file:///tmp
-LIBIOPCTASKSHELL_SOURCE        = libiopctaskshell.tar.bz2
+LIBIOPCTASKSHELL_SITE          = $(call github,YuanYuLin,libiopctaskshell,$(LIBIOPCTASKSHELL_VERSION))
+#LIBIOPCTASKSHELL_SITE          = file:///tmp
+#LIBIOPCTASKSHELL_SOURCE        = libiopctaskshell.tar.bz2
 LIBIOPCTASKSHELL_LICENSE       = GPLv2+
 LIBIOPCTASKSHELL_LICENSE_FILES = COPYING
 

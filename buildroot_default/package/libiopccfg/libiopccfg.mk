@@ -4,12 +4,12 @@
 #
 ################################################################################
 
-#LIBIOPCCFG_VERSION       = 29423707bd9f8759fa85dd331ce31d4612c62d26
+LIBIOPCCFG_VERSION       = 29423707bd9f8759fa85dd331ce31d4612c62d26
 LIBIOPCCFG_VERSION_MAJOR = 1
 LIBIOPCCFG_VERSION_MINOR = 0
-#LIBIOPCCFG_SITE          = $(call github,YuanYuLin,libiopccfg,$(LIBIOPCCFG_VERSION))
-LIBIOPCCFG_SITE          = file:///tmp
-LIBIOPCCFG_SOURCE        = libiopccfg.tar.bz2
+LIBIOPCCFG_SITE          = $(call github,YuanYuLin,libiopccfg,$(LIBIOPCCFG_VERSION))
+#LIBIOPCCFG_SITE          = file:///tmp
+#LIBIOPCCFG_SOURCE        = libiopccfg.tar.bz2
 LIBIOPCCFG_LICENSE       = GPLv2+
 LIBIOPCCFG_LICENSE_FILES = COPYING
 LIBIOPCCFG_INSTALL_STAGING = YES
