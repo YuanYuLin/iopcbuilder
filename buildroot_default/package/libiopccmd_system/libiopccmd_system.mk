@@ -4,12 +4,12 @@
 #
 ################################################################################
 
-#LIBIOPCCMD_SYSTEM_VERSION       = 29423707bd9f8759fa85dd331ce31d4612c62d26
+LIBIOPCCMD_SYSTEM_VERSION       = 7f401a336508111762c714772bed1eda34fab2f3
 LIBIOPCCMD_SYSTEM_VERSION_MAJOR = 1
 LIBIOPCCMD_SYSTEM_VERSION_MINOR = 0
-#LIBIOPCCMD_SYSTEM_SITE          = $(call github,YuanYuLin,libiopccmd_system,$(LIBIOPCCMD_SYSTEM_VERSION))
-LIBIOPCCMD_SYSTEM_SITE          = file:///tmp
-LIBIOPCCMD_SYSTEM_SOURCE        = libiopccmd_system.tar.bz2
+LIBIOPCCMD_SYSTEM_SITE          = $(call github,YuanYuLin,libiopccmd_system,$(LIBIOPCCMD_SYSTEM_VERSION))
+#LIBIOPCCMD_SYSTEM_SITE          = file:///tmp
+#LIBIOPCCMD_SYSTEM_SOURCE        = libiopccmd_system.tar.bz2
 LIBIOPCCMD_SYSTEM_LICENSE       = GPLv2+
 LIBIOPCCMD_SYSTEM_LICENSE_FILES = COPYING
 

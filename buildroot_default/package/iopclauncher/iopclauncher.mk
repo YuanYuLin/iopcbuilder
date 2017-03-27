@@ -3,11 +3,12 @@
 #
 ################################################################################
 
-#IOPCLAUNCHER_VERSION       = 5e7344a1675a9d7c86a74f608678305401016aa4
-IOPCLAUNCHER_SITE          = file:///tmp
+IOPCLAUNCHER_VERSION       = 91b17bf50ef85fb3896ca70b2c9b76ffc31c9f6b
+IOPCLAUNCHER_SITE          = $(call github,YuanYuLin,iopclauncher,$(IOPCLAUNCHER_VERSION))
+#IOPCLAUNCHER_SITE          = file:///tmp
 IOPCLAUNCHER_LICENSE       = GPLv2+
 IOPCLAUNCHER_LICENSE_FILES = COPYING
-IOPCLAUNCHER_SOURCE = iopclauncher.tar.bz2
+#IOPCLAUNCHER_SOURCE = iopclauncher.tar.bz2
 
 IOPCLAUNCHER_PACKAGE_DIR   = $(BASE_DIR)/packages/iopclauncher
 IOPCLAUNCHER_DEPENDENCIES += libiopccommon

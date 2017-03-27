@@ -4,10 +4,10 @@
 #
 ################################################################################
 
-#IOPCCFG_BDB_VERSION       = 5787182c973b086a81e550177af3e1a8e2e73eec
-#IOPCCFG_BDB_SITE          = $(call github,YuanYuLin,iopccfg_bdb,$(IOPCCFG_BDB_VERSION))
-IOPCCFG_BDB_SITE          = file:///tmp
-IOPCCFG_BDB_SOURCE        = iopccfg_bdb.tar.bz2
+IOPCCFG_BDB_VERSION       = 7569dada006fe217aa6253f5448d3f764d9b9e60
+IOPCCFG_BDB_SITE          = $(call github,YuanYuLin,iopccfg_bdb,$(IOPCCFG_BDB_VERSION))
+#IOPCCFG_BDB_SITE          = file:///tmp
+#IOPCCFG_BDB_SOURCE        = iopccfg_bdb.tar.bz2
 IOPCCFG_BDB_LICENSE       = GPLv2+
 IOPCCFG_BDB_LICENSE_FILES = COPYING
 

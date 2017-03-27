@@ -4,12 +4,12 @@
 #
 ################################################################################
 
-#LIBIOPCTASKTIMER_VERSION       = 29423707bd9f8759fa85dd331ce31d4612c62d26
+LIBIOPCTASKTIMER_VERSION       = 6c33d2fe69fa522c23fe3b5eeeaab471054df251
 LIBIOPCTASKTIMER_VERSION_MAJOR = 1
 LIBIOPCTASKTIMER_VERSION_MINOR = 0
-#LIBIOPCTASKTIMER_SITE          = $(call github,YuanYuLin,libiopctasktimer,$(LIBIOPCTASKTIMER_VERSION))
-LIBIOPCTASKTIMER_SITE          = file:///tmp
-LIBIOPCTASKTIMER_SOURCE        = libiopctasktimer.tar.bz2
+LIBIOPCTASKTIMER_SITE          = $(call github,YuanYuLin,libiopctasktimer,$(LIBIOPCTASKTIMER_VERSION))
+#LIBIOPCTASKTIMER_SITE          = file:///tmp
+#LIBIOPCTASKTIMER_SOURCE        = libiopctasktimer.tar.bz2
 LIBIOPCTASKTIMER_LICENSE       = GPLv2+
 LIBIOPCTASKTIMER_LICENSE_FILES = COPYING
 

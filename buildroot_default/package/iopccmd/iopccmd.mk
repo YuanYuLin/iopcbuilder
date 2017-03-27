@@ -4,10 +4,10 @@
 #
 ################################################################################
 
-#IOPCCMD_VERSION       = 5787182c973b086a81e550177af3e1a8e2e73eec
-#IOPCCMD_SITE          = $(call github,YuanYuLin,iopccmd,$(IOPCCMD_VERSION))
-IOPCCMD_SITE          = file:///tmp
-IOPCCMD_SOURCE        = iopccmd.tar.bz2
+IOPCCMD_VERSION       = f516c21b957cfae3d4e7ac658e2a0fa6ca2ec733
+IOPCCMD_SITE          = $(call github,YuanYuLin,iopccmd,$(IOPCCMD_VERSION))
+#IOPCCMD_SITE          = file:///tmp
+#IOPCCMD_SOURCE        = iopccmd.tar.bz2
 IOPCCMD_LICENSE       = GPLv2+
 IOPCCMD_LICENSE_FILES = COPYING
 

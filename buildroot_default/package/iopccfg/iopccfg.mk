@@ -4,9 +4,9 @@
 #
 ################################################################################
 
-#IOPCCFG_VERSION       = 5787182c973b086a81e550177af3e1a8e2e73eec
-#IOPCCFG_SITE          = $(call github,YuanYuLin,iopccfg,$(IOPCCFG_VERSION))
-IOPCCFG_SITE          = file:///tmp
+IOPCCFG_VERSION       = 5787182c973b086a81e550177af3e1a8e2e73eec
+IOPCCFG_SITE          = $(call github,YuanYuLin,iopccfg,$(IOPCCFG_VERSION))
+#IOPCCFG_SITE          = file:///tmp
 IOPCCFG_SOURCE        = iopccfg.tar.bz2
 IOPCCFG_LICENSE       = GPLv2+
 IOPCCFG_LICENSE_FILES = COPYING

@@ -4,9 +4,9 @@
 #
 ################################################################################
 
-#IOPCCFG_JSON_VERSION       = 5787182c973b086a81e550177af3e1a8e2e73eec
-#IOPCCFG_JSON_SITE          = $(call github,YuanYuLin,iopccfg_json,$(IOPCCFG_JSON_VERSION))
-IOPCCFG_JSON_SITE          = file:///tmp
+IOPCCFG_JSON_VERSION       = a211f56cb2524e558771d749f6c2f6f280d3dd78
+IOPCCFG_JSON_SITE          = $(call github,YuanYuLin,iopccfg_json,$(IOPCCFG_JSON_VERSION))
+#IOPCCFG_JSON_SITE          = file:///tmp
 IOPCCFG_JSON_SOURCE        = iopccfg_json.tar.bz2
 IOPCCFG_JSON_LICENSE       = GPLv2+
 IOPCCFG_JSON_LICENSE_FILES = COPYING

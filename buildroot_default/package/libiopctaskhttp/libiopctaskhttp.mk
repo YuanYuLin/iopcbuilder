@@ -4,11 +4,11 @@
 #
 ################################################################################
 
-#LIBIOPCTASKHTTP_VERSION       = 29423707bd9f8759fa85dd331ce31d4612c62d26
+LIBIOPCTASKHTTP_VERSION       = 733d38fb294d51e2745e300ff942d9013a6aefb1
 LIBIOPCTASKHTTP_VERSION_MAJOR = 1
 LIBIOPCTASKHTTP_VERSION_MINOR = 0
-#LIBIOPCTASKHTTP_SITE          = $(call github,YuanYuLin,libiopctaskhttp,$(LIBIOPCTASKHTTP_VERSION))
-LIBIOPCTASKHTTP_SITE          = file:///tmp
+LIBIOPCTASKHTTP_SITE          = $(call github,YuanYuLin,libiopctaskhttp,$(LIBIOPCTASKHTTP_VERSION))
+#LIBIOPCTASKHTTP_SITE          = file:///tmp
 LIBIOPCTASKHTTP_SOURCE        = libiopctaskhttp.tar.bz2
 LIBIOPCTASKHTTP_LICENSE       = GPLv2+
 LIBIOPCTASKHTTP_LICENSE_FILES = COPYING

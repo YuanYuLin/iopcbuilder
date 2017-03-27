@@ -4,12 +4,12 @@
 #
 ################################################################################
 
-#LIBIOPCCMD_CLIENT_VERSION       = 29423707bd9f8759fa85dd331ce31d4612c62d26
+LIBIOPCCMD_CLIENT_VERSION       = 0fd0bfd16ae88e7e93c96a5159b741192d00ecd4
 LIBIOPCCMD_CLIENT_VERSION_MAJOR = 1
 LIBIOPCCMD_CLIENT_VERSION_MINOR = 0
-#LIBIOPCCMD_CLIENT_SITE          = $(call github,YuanYuLin,libiopccmd_client,$(LIBIOPCCMD_CLIENT_VERSION))
-LIBIOPCCMD_CLIENT_SITE          = file:///tmp
-LIBIOPCCMD_CLIENT_SOURCE        = libiopccmd_client.tar.bz2
+LIBIOPCCMD_CLIENT_SITE          = $(call github,YuanYuLin,libiopccmd_client,$(LIBIOPCCMD_CLIENT_VERSION))
+#LIBIOPCCMD_CLIENT_SITE          = file:///tmp
+#LIBIOPCCMD_CLIENT_SOURCE        = libiopccmd_client.tar.bz2
 LIBIOPCCMD_CLIENT_LICENSE       = GPLv2+
 LIBIOPCCMD_CLIENT_LICENSE_FILES = COPYING
 LIBIOPCCMD_CLIENT_INSTALL_STAGING = YES

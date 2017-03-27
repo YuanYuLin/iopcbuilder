@@ -4,11 +4,11 @@
 #
 ################################################################################
 
-#LIBIOPCCMD_NETWORK_VERSION       = 29423707bd9f8759fa85dd331ce31d4612c62d26
+LIBIOPCCMD_NETWORK_VERSION       = 29423707bd9f8759fa85dd331ce31d4612c62d26
 LIBIOPCCMD_NETWORK_VERSION_MAJOR = 1
 LIBIOPCCMD_NETWORK_VERSION_MINOR = 0
-#LIBIOPCCMD_NETWORK_SITE          = $(call github,YuanYuLin,libiopccmd_network,$(LIBIOPCCMD_NETWORK_VERSION))
-LIBIOPCCMD_NETWORK_SITE          = file:///tmp
+LIBIOPCCMD_NETWORK_SITE          = $(call github,YuanYuLin,libiopccmd_network,$(LIBIOPCCMD_NETWORK_VERSION))
+#LIBIOPCCMD_NETWORK_SITE          = file:///tmp
 LIBIOPCCMD_NETWORK_SOURCE        = libiopccmd_network.tar.bz2
 LIBIOPCCMD_NETWORK_LICENSE       = GPLv2+
 LIBIOPCCMD_NETWORK_LICENSE_FILES = COPYING

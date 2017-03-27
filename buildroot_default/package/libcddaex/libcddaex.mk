@@ -4,11 +4,11 @@
 #
 ################################################################################
 
-#LIBCDDAEX_VERSION       = 29423707bd9f8759fa85dd331ce31d4612c62d26
+LIBCDDAEX_VERSION       = 204eeeb20771ea43c08fb718c17314882979b83b
 LIBCDDAEX_VERSION_MAJOR = 1
 LIBCDDAEX_VERSION_MINOR = 0
-#LIBCDDAEX_SITE          = $(call github,YuanYuLin,libcddaex,$(LIBCDDAEX_VERSION))
-LIBCDDAEX_SITE          = file:///tmp
+LIBCDDAEX_SITE          = $(call github,YuanYuLin,libcddaex,$(LIBCDDAEX_VERSION))
+#LIBCDDAEX_SITE          = file:///tmp
 LIBCDDAEX_SOURCE        = libcddaex.tar.bz2
 LIBCDDAEX_LICENSE       = GPLv2+
 LIBCDDAEX_LICENSE_FILES = COPYING

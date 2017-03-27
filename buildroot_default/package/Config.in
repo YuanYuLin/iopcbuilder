@@ -6,6 +6,7 @@ menu "extra packages"
 		source "package/platform_raspberrypi/Config.in"
 		source "package/platform_raspberrypi2/Config.in"
 		source "package/platform_pandaboard/Config.in"
+		source "package/platform_x86_64/Config.in"
 	endmenu
 
 	menu "System Tools"

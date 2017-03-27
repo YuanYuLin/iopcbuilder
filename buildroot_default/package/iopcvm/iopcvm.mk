@@ -4,10 +4,10 @@
 #
 ################################################################################
 
-#IOPCVM_VERSION       = 5787182c973b086a81e550177af3e1a8e2e73eec
-#IOPCVM_SITE          = $(call github,YuanYuLin,iopcvm,$(IOPCVM_VERSION))
-IOPCVM_SITE          = file:///tmp
-IOPCVM_SOURCE        = iopcvm.tar.bz2
+IOPCVM_VERSION       = bf7facbe064ae2e857b4e6da7e27c30c16e79ed6
+IOPCVM_SITE          = $(call github,YuanYuLin,iopcvm,$(IOPCVM_VERSION))
+#IOPCVM_SITE          = file:///tmp
+#IOPCVM_SOURCE        = iopcvm.tar.bz2
 IOPCVM_LICENSE       = GPLv2+
 IOPCVM_LICENSE_FILES = COPYING
 

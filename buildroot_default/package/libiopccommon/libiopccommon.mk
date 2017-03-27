@@ -4,12 +4,12 @@
 #
 ################################################################################
 
-#LIBIOPCCOMMON_VERSION       = 29423707bd9f8759fa85dd331ce31d4612c62d26
+LIBIOPCCOMMON_VERSION       = edb2758bbc2f86f0c48adb9d739ee34e560e7abe
 LIBIOPCCOMMON_VERSION_MAJOR = 1
 LIBIOPCCOMMON_VERSION_MINOR = 0
-#LIBIOPCCOMMON_SITE          = $(call github,YuanYuLin,libiopccommon,$(LIBIOPCCOMMON_VERSION))
-LIBIOPCCOMMON_SITE          = file:///tmp
-LIBIOPCCOMMON_SOURCE        = libiopccommon.tar.bz2
+LIBIOPCCOMMON_SITE          = $(call github,YuanYuLin,libiopccommon,$(LIBIOPCCOMMON_VERSION))
+#LIBIOPCCOMMON_SITE          = file:///tmp
+#LIBIOPCCOMMON_SOURCE        = libiopccommon.tar.bz2
 LIBIOPCCOMMON_LICENSE       = GPLv2+
 LIBIOPCCOMMON_LICENSE_FILES = COPYING
 LIBIOPCCOMMON_INSTALL_STAGING = YES
